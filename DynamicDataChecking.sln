@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDataChecking", "DynamicDataChecking\DynamicDataChecking.csproj", "{1A561200-F44E-4230-9E92-47F4C3D0EB33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{05B853DB-2007-4687-9A28-4034C0769FBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A561200-F44E-4230-9E92-47F4C3D0EB33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A561200-F44E-4230-9E92-47F4C3D0EB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A561200-F44E-4230-9E92-47F4C3D0EB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A561200-F44E-4230-9E92-47F4C3D0EB33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B853DB-2007-4687-9A28-4034C0769FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B853DB-2007-4687-9A28-4034C0769FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B853DB-2007-4687-9A28-4034C0769FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B853DB-2007-4687-9A28-4034C0769FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
