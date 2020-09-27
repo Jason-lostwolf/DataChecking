@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDataChecking", "Dyna
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{05B853DB-2007-4687-9A28-4034C0769FBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{211BC665-14B2-46F2-ADA7-1481CA547A79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{05B853DB-2007-4687-9A28-4034C0769FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B853DB-2007-4687-9A28-4034C0769FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B853DB-2007-4687-9A28-4034C0769FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211BC665-14B2-46F2-ADA7-1481CA547A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211BC665-14B2-46F2-ADA7-1481CA547A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211BC665-14B2-46F2-ADA7-1481CA547A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211BC665-14B2-46F2-ADA7-1481CA547A79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

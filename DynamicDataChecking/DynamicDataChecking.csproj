@@ -44,16 +44,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CommonClass\FormExtensionHelper.cs" />
+    <Compile Include="CommonClass\Mp3Helper.cs" />
+    <Compile Include="CommonClass\MyOpaqueLayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonClass\OpaqueCommand.cs" />
+    <Compile Include="Controls\FrmScanReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Controls\FrmScanReport.designer.cs">
+      <DependentUpon>FrmScanReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\BusinessDataSetting.cs" />
+    <Compile Include="CommonClass\ScanSoundHelper.cs" />
+    <Compile Include="CommonClass\SoundHelper.cs" />
+    <Compile Include="CommonClass\SoundType.cs" />
+    <Compile Include="CommonClass\Utilities.cs" />
+    <Compile Include="FrmScanBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScanBarcode.Designer.cs">
+      <DependentUpon>FrmScanBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Mas_ValidationRule.cs" />
+    <Compile Include="Model\ScanModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Controls\ScanReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ScanReport.designer.cs">
+      <DependentUpon>ScanReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmScanBarcode.resx">
+      <DependentUpon>FrmScanBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmScanReport.resx">
+      <DependentUpon>FrmScanReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -63,7 +91,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Controls\ScanReport.resx">
+      <DependentUpon>ScanReport.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -73,6 +105,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{211bc665-14b2-46f2-ada7-1481ca547a79}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{05b853db-2007-4687-9a28-4034c0769fbf}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\barcode.bmp" />
+    <Content Include="Images\barcode.ico" />
+    <Content Include="Images\Database.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\setting.png" />
+    <None Include="Resources\barcode.bmp" />
+    <None Include="Resources\Database.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\timg.gif" />
+    <None Include="Resources\barcode.ico" />
+    <Content Include="Sounds\BarcodeNotSuccess.mp3" />
+    <Content Include="Sounds\BarcodeSuccessScanColorBox.mp3" />
+    <Content Include="Sounds\Error.wav" />
+    <Content Include="Sounds\FinishOneInnerBox.mp3" />
+    <Content Include="Sounds\OneBoxNotFinish.wav" />
+    <Content Include="Sounds\OneOutsiteBoxFinish.mp3" />
+    <Content Include="Sounds\SameData.mp3" />
+    <Content Include="Sounds\ScanFirstInnerBox.mp3" />
+    <Content Include="Sounds\Succeed.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

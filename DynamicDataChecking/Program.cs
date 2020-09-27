@@ -15,7 +15,8 @@ namespace DynamicDataChecking
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmScanBarcode("V1.2"));
         }
     }
 }
+// V1.2 变更扫描样式，增加查询和单个PO防重复功能
