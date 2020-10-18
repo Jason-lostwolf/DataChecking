@@ -97,7 +97,7 @@ namespace DynamicDataChecking
         {
             get
             {
-                return this.POMACList.Where(c => string.IsNullOrEmpty(c.Barcode) == false).ToList();
+                return this.POMACList.Where(c => string.IsNullOrEmpty(c.Barcode) == false).OrderBy(c=>c.ScanTime).ToList();
             }
         }
          
@@ -242,6 +242,7 @@ namespace DynamicDataChecking
                                 this.Invoke(new Action(delegate
                                 {
                                     this.txtShowData.Text = CurrentScanModel.DeviceId;
+                                    this.RefreshDataGrid();
                                     RefreshUI();
                                     lblScanResult.Text = "成功 " + CurrentScanModel.ScanTime;// +" time:" + (endDate - startDate).TotalMilliseconds;
                                     lblScanResult.BackColor = Color.Lime;
@@ -658,7 +659,7 @@ namespace DynamicDataChecking
             }
         }
 
-        List<string> DisplayColumnNameList = new List<string>() { "Barcode" };
+        List<string> DisplayColumnNameList = new List<string>() { "Barcode","DeviceId" };
         private void InitDataGrid()
         {
             BindingSource bs = new BindingSource();
@@ -669,7 +670,11 @@ namespace DynamicDataChecking
             foreach (DataGridViewColumn item in dataGridView.Columns)
             {
                 item.Visible = displayColumns.Contains(item.Name);
-                item.Width = 300;
+                if (item.Visible == true)
+                {
+                    item.DisplayIndex = DisplayColumnNameList.IndexOf(item.Name);
+                }
+                item.Width = 280;
             }
 
         }
@@ -683,7 +688,11 @@ namespace DynamicDataChecking
             foreach (DataGridViewColumn item in dataGridView.Columns)
             {
                 item.Visible = displayColumns.Contains(item.Name);
-                item.Width = 300;
+                if (item.Visible == true)
+                {
+                    item.DisplayIndex = DisplayColumnNameList.IndexOf(item.Name);
+                }
+                item.Width = 280;
             }
             //dataGridView.Columns["SN"].Width = 300;
             //dataGridView.Columns["MAC"].Width = 300;
