@@ -15,9 +15,10 @@ namespace DynamicDataChecking
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmScanBarcode("V1.3"));
+            Application.Run(new FrmScanBarcode("V1.4"));
         }
     }
 }
 // V1.2 变更扫描样式，增加查询和单个PO防重复功能
 // V1.3 保存的时候刷新列表,Barcode右边增加列DeviceId
+// V1.4 结果一直选择最后一行

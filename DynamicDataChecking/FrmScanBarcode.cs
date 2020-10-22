@@ -704,11 +704,13 @@ namespace DynamicDataChecking
                 if (pIndex >= 0)
                 {
                     this.dataGridView.Rows[pIndex].Selected = true;
+                    this.dataGridView.FirstDisplayedScrollingRowIndex = pIndex;
                 }
             }
             else if(this.ViewPOMACList.Count>0)
             {
                 this.dataGridView.Rows[this.ViewPOMACList.Count - 1].Selected = true;
+                this.dataGridView.FirstDisplayedScrollingRowIndex = this.ViewPOMACList.Count - 1;
             }
         }
 
