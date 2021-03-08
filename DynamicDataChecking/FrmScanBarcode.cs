@@ -527,13 +527,13 @@ namespace DynamicDataChecking
             string originalBarcode = barcode;
 
             //截取条码
-            string CheckData = barcode.Replace("-", "");
-            if(CheckData.Length>=2)
-            {
-                CheckData = CheckData.Substring(2);
-            }
+            //string CheckData = barcode.Replace("-", "");
+            //if(CheckData.Length>=2)
+            //{
+            //    CheckData = CheckData.Substring(2);
+            //}
 
-            if (string.IsNullOrEmpty(CheckData) == true)
+            if (string.IsNullOrEmpty(originalBarcode) == true)
             {
                 message = "条码不能为空";
                 soundType = SoundType.NoData;
@@ -544,7 +544,7 @@ namespace DynamicDataChecking
             #region whether dumplicated
             //先判断逻辑
             //1.条码不能是已扫
-            ScanModel product = POMACList.FirstOrDefault(c => c.DeviceId == CheckData);
+            ScanModel product = POMACList.FirstOrDefault(c => c.DeviceId == originalBarcode);
             if (product != null && string.IsNullOrEmpty(product.ScanTime)==false)
             {
                 message = "条码已扫描, 时间:" + product.ScanTime;
@@ -659,7 +659,7 @@ namespace DynamicDataChecking
             }
         }
 
-        List<string> DisplayColumnNameList = new List<string>() { "Barcode","DeviceId" };
+        List<string> DisplayColumnNameList = new List<string>() { "Barcode", "EncryptedQRCode" };
         private void InitDataGrid()
         {
             BindingSource bs = new BindingSource();
@@ -674,9 +674,9 @@ namespace DynamicDataChecking
                 {
                     item.DisplayIndex = DisplayColumnNameList.IndexOf(item.Name);
                 }
-                item.Width = 280;
+                //item.Width = 280;
             }
-
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void RefreshDataGrid(ScanModel scanEntity = null)
         {
